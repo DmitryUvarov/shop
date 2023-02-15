@@ -41,3 +41,41 @@
     background-color: #ffffff;
   }
 }
+
+//========================================================================================================================================================
+
+.breadcrumbs {
+  white-space: nowrap;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 20, 10);
+    line-height: 200%; /* 40/20 */
+
+    color: #858585;
+  }
+
+  &__link {
+    font-family: "Montserrat";
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        color: #000;
+      }
+    }
+
+    &::after {
+      content: "/";
+    }
+  }
+
+  &__current {
+  }
+}

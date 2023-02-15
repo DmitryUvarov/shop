@@ -58,6 +58,18 @@ function documentActions(event) {
         document.querySelector('.category-header__item').classList.add('active')
     }
 
+    if (targerElement.closest('.filter-btn')) {
+        html.classList.toggle('filter-open')
+        html.classList.toggle('lock')
+    }
+    if (targerElement.closest('.filter__close')) {
+        if (html.closest('.filter-open')) {
+            html.classList.toggle('filter-open')
+            html.classList.toggle('lock')
+        }
+
+    }
+
 
 }
 

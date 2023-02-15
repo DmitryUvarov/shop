@@ -134,6 +134,7 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "catalog";
 
 .page {
   &__advantages {
@@ -143,5 +144,7 @@ body {
   &__banners {
   }
   &__sales {
+  }
+  &__top {
   }
 }

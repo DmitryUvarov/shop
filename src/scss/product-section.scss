@@ -155,6 +155,7 @@
     line-height: 120%; /* 24/20 */
     color: #363636;
     transition: all 0.3s ease 0s;
+    margin-bottom: rem(6);
 
     @media (any-hover: hover) {
       &:hover {

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Каталог"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+
+                <section class="page__top top-page">
+                    <div class="top-page__container">
+                        <h1 class="top-page__title">Периферия для компьютеров <small>12533 товаров</small> <button class="filter-btn _icon-filter"></button> </h1>
+                        <div class="top-page__breadcrumbs breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Электроника</a></li>
+                                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Периферия для компьютеров</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__catalog catalog-page">
+                    <div class="catalog-page__container">
+                        <div class="catalog-page__body">
+                            <div class="catalog-page__filter filter-catalog-page">
+                                <ul class="filter-catalog-page__categoty">
+                                    <li class="filter-catalog-page__item-category"><a href="">Клавиатуры и мыши</a></li>
+                                    <li class="filter-catalog-page__item-category"><a href="">Графические планшеты и аксессуары</a></li>
+                                    <li class="filter-catalog-page__item-category"><a href="">Компьютерные гарнитуры</a></li>
+                                    <li class="filter-catalog-page__item-category"><a href="">Игровые наушники</a></li>
+                                    <li class="filter-catalog-page__item-category"><a href="">Компьютерная акустика</a></li>
+                                </ul>
+                                <div class="filter">
+                                    <div data-spollers class="filter__body">
+
+                                        <div class="filter__top">
+                                            Фильтры
+                                            <div class="filter__close _icon-close"></div>
+                                        </div>
+
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__title _spoller-active">Бренды</button>
+                                            <div class="item-filter__body">
+                                                <div class="checkbox">
+                                                    <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_1" class="checkbox__label"><span class="checkbox__text">Defender</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_2" class="checkbox__label"><span class="checkbox__text">Samsung</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_3" class="checkbox__label"><span class="checkbox__text">Redmi</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter item-filter_range">
+                                            <button type="button" data-spoller class="item-filter__title _spoller-active">Цена</button>
+                                            <div class="item-filter__body">
+                                                <div class="range" >
+                                                    <div gata-range></div>
+                                                    <div class="range__content">
+                                                        <div class="range__item">
+                                                            <input tabindex="-1" readonly type="text" gata-value value="0">
+                                                            <span gata-value></span> <span>&nbsp;Sʻ</span>
+                                                        </div>
+                                                        <div class="range__item">
+                                                            <input tabindex="-1" readonly type="text" gata-value value="200000">
+                                                            <span gata-value></span>&nbsp;Sʻ
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter item-filter_colors">
+                                            <button type="button" data-spoller class="item-filter__title _spoller-active">Цвет</button>
+                                            <div class="item-filter__body">
+
+                                                <div class="options options_color">
+                                                    <div class="options__item">
+                                                        <input hidden id="o_1" class="options__input" checked type="checkbox" value="1" name="option">
+                                                        <label for="o_1" class="options__label">
+                                                            <span style="background: #F1F1F1;"></span>
+                                                            <span style="border-color: #F1F1F1;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_2" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_2" class="options__label">
+                                                            <span style="background: #000000;"></span>
+                                                            <span style="border-color: #000000;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_3" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_3" class="options__label">
+                                                            <span style="background: #FF0000;"></span>
+                                                            <span style="border-color: #FF0000;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_4" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_4" class="options__label">
+                                                            <span style="background: #FF7A00;"></span>
+                                                            <span style="border-color: #FF7A00;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_5" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_5" class="options__label">
+                                                            <span style="background: #FFE600;"></span>
+                                                            <span style="border-color: #FFE600;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_6" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_6" class="options__label">
+                                                            <span style="background: #4CED00;"></span>
+                                                            <span style="border-color: #4CED00;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_7" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_7" class="options__label">
+                                                            <span style="background: #00E0FF;"></span>
+                                                            <span style="border-color: #00E0FF;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_8" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_8" class="options__label">
+                                                            <span style="background: #001AFF;"></span>
+                                                            <span style="border-color: #001AFF;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_9" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_9" class="options__label">
+                                                            <span style="background: #AD00FF;"></span>
+                                                            <span style="border-color: #AD00FF;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_10" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_10" class="options__label">
+                                                            <span style="background: #FF00C7;"></span>
+                                                            <span style="border-color: #FF00C7;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_11" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_11" class="options__label">
+                                                            <span style="background: #6D6D6D;"></span>
+                                                            <span style="border-color: #6D6D6D;"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="options__item">
+                                                        <input hidden id="o_12" class="options__input" type="checkbox" value="2" name="option">
+                                                        <label for="o_12" class="options__label">
+                                                            <span style="background: #FFD0D0;"></span>
+                                                            <span style="border-color: #FFD0D0;"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__title _spoller-active">Обьем встроенной
+                                                памяти</button>
+                                            <div class="item-filter__body">
+                                                <div class="checkbox">
+                                                    <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_4" class="checkbox__label"><span class="checkbox__text">216GB</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_5" class="checkbox__label"><span class="checkbox__text">128GB</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__title _spoller-active">Отпечаток пальца</button>
+                                            <div class="item-filter__body">
+                                                <div class="checkbox">
+                                                    <input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_6" class="checkbox__label"><span class="checkbox__text">Есть</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_8" class="checkbox__label"><span class="checkbox__text">Сзади</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-page__products">
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="products-items__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="@img/product/image01.jpg" alt="">
+                                        <span class="item-product__sale">20%</span>
+                                        <button class="item-product__favotite _icon-favorite"></button>
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__subtitle">Куплено более 2100</div>
+                                        <div class="item-product__price price-product">
+                                            <div class="price-product__current">3.200.000 сум</div>
+                                            <div class="price-product__old">4.000.000 сум</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Sleeve Sweatshot</a>
+                                        <div class="item-product__colors">
+                                            <a href="" class="colors-item active"><span style="background-color: #000;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #29734F;"></span></a>
+                                            <a href="" class="colors-item active"><span style="background-color: #332973;"></span></a>
+                                            <a href="" class="colors-item"><span style="background-color: #732963;"></span></a>
+                                        </div>
+                                        <div class="item-product__buttons">
+                                            <button class="item-product__card-button _icon-card-product"></button>
+                                            <a href="" class="button">ПОДРОБНЕЕ</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
