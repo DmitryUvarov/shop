@@ -71,15 +71,6 @@
   }
 
   &__products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
-    gap: rem(12);
-
-    @media (max-width: $mobile) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: rem(6);
-    }
-
     & .item-product__image {
       padding-bottom: percent(280, 254);
     }
@@ -92,6 +83,19 @@
     & .item-product__sale {
       background: rgba(255, 0, 0, 0.5);
     }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    gap: rem(12);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(6);
+    }
+  }
+  &__pagging {
+    @include adaptiveValue("margin-top", 85, 30);
   }
 }
 .filter-catalog-page {

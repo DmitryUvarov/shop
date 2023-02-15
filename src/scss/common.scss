@@ -79,3 +79,57 @@
   &__current {
   }
 }
+
+//========================================================================================================================================================
+
+.pagging {
+  display: flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 125%; /* 25/20 */
+    color: #8e8e8e;
+    display: block;
+    padding: 0 rem(3);
+
+    @media (max-width: $mobile) {
+      font-size: rem(17);
+    }
+
+    @media (any-hover: hover) {
+      &:not(.active):hover {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
+    &.active {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #fff;
+      border-radius: 50%;
+
+      @media (max-width: $mobile) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
