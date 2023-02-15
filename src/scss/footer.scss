@@ -1,3 +1,91 @@
 //====================================================================================================
 
+.footer {
+  &__container {
+  }
+  &__body {
+    display: flex;
+    @include adaptiveValue("padding-top", 95, 30);
+    @include adaptiveValue("padding-bottom", 90, 40);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: rem(25);
+    }
+  }
+  &__logo {
+    margin-right: rem(150);
+
+    @media (max-width: $tablet) {
+      margin-right: 0;
+    }
+
+    @include adaptiveValue("margin-right", 150, 50, 1330, 992, 1);
+    & a {
+      font-weight: 700;
+      font-size: rem(38);
+      line-height: 105.3%; /* 40/38 */
+      text-transform: uppercase;
+      color: #151515;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex: 1 1 100%;
+    gap: rem(30);
+  }
+
+  &__item {
+    flex: 1 1 33.33333%;
+
+    @media (max-width: $mobile) {
+      flex: 1 1 auto;
+    }
+  }
+}
+.item-footer {
+  &_contact {
+    & .item-footer__link {
+      color: #1a1e29;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 14, 768, 375, 1);
+    line-height: 120.8%; /* 29/24 */
+    color: #1a1e29;
+
+    &:not(:last-child) {
+      margin-bottom: rem(27);
+      @include adaptiveValue("margin-bottom", 27, 10, 768, 375, 1);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: rem(19);
+    @include adaptiveValue("font-size", 19, 10, 768, 375, 1);
+    line-height: 210.5%; /* 40/19 */
+    color: #858585;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 //====================================================================================================
