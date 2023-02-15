@@ -175,17 +175,17 @@
 				<section class="page__banners banners-page">
 					<div class="banners-page__container">
 						<div class="banners-page__body">
-							<div class="banners-page__item">
+							<a href="" class="banners-page__item">
 								<div class="banners-page__title">Одежда</div>
 								<div class="banners-page__title banners-page__title_mt">Скидки на все</div>
 								<div class="banners-page__num">30%</div>
 								<img src="@img/banners/image1.jpg" class="banners-page__image" alt="">
-							</div>
-							<div class="banners-page__item">
+							</a>
+							<a href="" class="banners-page__item">
 								<div class="banners-page__title">Акция на аксессуары Apple</div>
 								<div class="banners-page__text">это замечательная возможность совершить выгодную покупку и получить в качестве бонуса подарок или скидку</div>
 								<img src="@img/banners/image2.jpg" class="banners-page__image" alt="">
-							</div>
+							</a>
 						</div>
 					</div>
 				</section>
@@ -197,19 +197,23 @@
 				<section class="page__sales">
 					<div class="sales__container">
 						<div class="sales__body">
-							<div class="sales__item item-sales">
+							<a href="" class="sales__item item-sales">
 								<div class="item-sales__title">Одежда</div>
 								<div class="item-sales__number">30%</div>
 								<img src="@img/sales/image1.jpg" alt="" class="item-sales__image">
-							</div>
-							<div class="sales__item item-sales">
+							</a>
+							<a href="" class="sales__item item-sales">
 								<div class="item-sales__title">Одежда</div>
 								<div class="item-sales__number">50%</div>
 								<img src="@img/sales/image2.jpg" alt="" class="item-sales__image">
-							</div>
+							</a>
 						</div>
 					</div>
 				</section>
+
+				@@include('html/_product-sections.htm',{
+					"title": "Вы смотрели"
+				})
 
 			</main>
 			@@include('html/_footer.htm',{})
