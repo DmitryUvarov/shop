@@ -172,6 +172,28 @@
 					"title": "Новое поступление"
 				})
 
+				<section class="page__banners banners-page">
+					<div class="banners-page__container">
+						<div class="banners-page__body">
+							<div class="banners-page__item">
+								<div class="banners-page__title">Одежда</div>
+								<div class="banners-page__title banners-page__title_mt">Скидки на все</div>
+								<div class="banners-page__num">30%</div>
+								<img src="@img/banners/image1.jpg" class="banners-page__image" alt="">
+							</div>
+							<div class="banners-page__item">
+								<div class="banners-page__title">Акция на аксессуары Apple</div>
+								<div class="banners-page__text">это замечательная возможность совершить выгодную покупку и получить в качестве бонуса подарок или скидку</div>
+								<img src="@img/banners/image2.jpg" class="banners-page__image" alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				@@include('html/_product-sections.htm',{
+					"title": "Товары со скидкой"
+				})
+
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
