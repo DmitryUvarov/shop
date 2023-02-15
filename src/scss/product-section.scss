@@ -1,0 +1,238 @@
+.product-section {
+  background: #eff0f6;
+  &__container {
+  }
+  &__body {
+    @include adaptiveValue("padding-top", 40, 25);
+    @include adaptiveValue("padding-bottom", 60, 25);
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 15, 8);
+
+    @include adaptiveValue("margin-bottom", 60, 20);
+  }
+
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 32, 16);
+    line-height: 125%; /* 40/32 */
+    color: #1a1e29;
+  }
+
+  &__link {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 16, 8);
+    line-height: 250%; /* 40/16 */
+    color: #858585;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+.products-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+  gap: rem(16);
+
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
+  }
+}
+.item-product {
+  background: #ffffff;
+  &__image {
+    display: block;
+    position: relative;
+    padding-bottom: percent(270, 320);
+
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: rem(5) rem(5) 0;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: 121.4%; /* 17/14 */
+    color: #858585;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__price {
+    margin-top: rem(12);
+    margin-bottom: rem(12);
+
+    @media (max-width: $mobile) {
+      margin-top: rem(6);
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 24, 14);
+    line-height: 120%; /* 24/20 */
+    color: #363636;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__colors {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+    @media (max-width: $mobile) {
+      margin-top: rem(6);
+    }
+  }
+
+  &__buttons {
+    margin: 0 rem(-5);
+    margin-top: rem(23);
+    display: flex;
+    gap: rem(4);
+
+    @media (max-width: $mobile) {
+      margin-top: rem(10);
+      gap: rem(2);
+    }
+
+    & a {
+      height: rem(56);
+      width: 100%;
+      min-width: 0;
+
+      @media (max-width: $mobile) {
+        height: rem(28);
+        font-size: rem(10);
+      }
+    }
+  }
+  &__card-button {
+    flex-shrink: 0;
+    height: rem(56);
+    width: rem(56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    transition: all 0.3s ease 0s;
+    &::before {
+      color: #fff;
+      @include adaptiveValue("font-size", 24, 16);
+    }
+
+    @media (max-width: $mobile) {
+      height: rem(28);
+      width: rem(28);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+.price-product {
+  display: flex;
+  align-items: center;
+  &__current {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 23, 14);
+    line-height: 121.7%; /* 28/23 */
+    color: #017eb4;
+  }
+
+  &__old {
+    position: relative;
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: 121.4%; /* 17/14 */
+    color: #858585;
+    margin-left: rem(7);
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 110%;
+      height: 1px;
+      background-color: #ff0000;
+      display: block;
+      position: absolute;
+      top: rem(7);
+      left: 0;
+      transform: rotate(-4deg);
+    }
+  }
+}
+.colors-item {
+  position: relative;
+  width: rem(32);
+  height: rem(32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mobile) {
+    width: rem(22);
+    height: rem(22);
+  }
+
+  & span {
+    display: block;
+    flex: 0 0 rem(28);
+    height: rem(28);
+    border-radius: 50%;
+
+    @media (max-width: $mobile) {
+      flex: 0 0 rem(18);
+      height: rem(18);
+    }
+  }
+  &.active {
+    span::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #000000;
+      border-radius: 50%;
+    }
+  }
+}
+
+.button {
+}
