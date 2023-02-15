@@ -133,3 +133,10 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+
+.page {
+  &__advantages {
+  }
+  &__discounts {
+  }
+}

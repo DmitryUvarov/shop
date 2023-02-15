@@ -7,9 +7,167 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section></section>
-				<section></section>
-				<section></section>
+				<!-- <section class="page__advantages advantages">
+					<div class="advantages__container">
+						<div class="advantages__body">
+							<div class="advantages__item">бесплатный возврат</div>
+							<div class="advantages__item">информация о покупке</div>
+							<div class="advantages__item">доставка</div>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="page__discounts discounts">
+					<div class="discounts__container">
+						<div class="discounts__body">
+							<div class="discounts__slider swiper">
+								<div class="discounts__wrapper swiper-wrapper">
+									<div class="discounts__slide swiper-slide slide-discounts">
+										<div class="slide-discounts__content">
+											<h3 class="slide-discounts__title">БОЛЬШИЕ СКИДКИ</h3>
+											<div class="slide-discounts__text">это замечательная возможность совершить выгодную покупку и получить в качестве бонуса подарок или скидку</div>
+											<a href="" class="slide-discounts__link button">ПОДРОБНЕЕ</a>
+										</div>
+
+										<div class="slide-discounts__image-ibg"><img src="@img/discounts/image01.jpg" alt=""></div>
+									</div>
+									<div class="discounts__slide swiper-slide slide-discounts">
+										<div class="slide-discounts__content">
+											<h3 class="slide-discounts__title">БОЛЬШИЕ СКИДКИ</h3>
+											<div class="slide-discounts__text">это замечательная возможность совершить выгодную покупку и получить в качестве бонуса подарок или скидку</div>
+											<a href="" class="slide-discounts__link button">ПОДРОБНЕЕ</a>
+										</div>
+
+										<div class="slide-discounts__image-ibg"><img src="@img/discounts/image01.jpg" alt=""></div>
+									</div>
+									<div class="discounts__slide swiper-slide slide-discounts">
+										<div class="slide-discounts__content">
+											<h3 class="slide-discounts__title">БОЛЬШИЕ СКИДКИ</h3>
+											<div class="slide-discounts__text">это замечательная возможность совершить выгодную покупку и получить в качестве бонуса подарок или скидку</div>
+											<a href="" class="slide-discounts__link button">ПОДРОБНЕЕ</a>
+										</div>
+
+										<div class="slide-discounts__image-ibg"><img src="@img/discounts/image01.jpg" alt=""></div>
+									</div>
+								</div>
+								<div class="discounts__pagination pagination"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="discounts-small">
+					<div class="discounts-small__container">
+						<div class="discounts-small__body">
+							<div class="discounts-small__item">10% скидка на одежду </div>
+							<div class="discounts-small__item">дополнительная скидка 20%</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__category category">
+					<div class="category__container">
+						<div class="category__body">
+							<div class="category__top">
+								<h4 class="category__title">Категории</h4>
+							</div>
+							<a href="" class="category__link">Смотреть все</a>
+							<div class="category__items">
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image01.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image1.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Женская одежда</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image02.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image2.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Детская одежда</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image03.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image3.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Обувь</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image04.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image4.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Аксуссуары</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image05.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image5.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Сумки</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image06.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image6.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Мужская одежда</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image07.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image7.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Электроника</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image08.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image8.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Детские товары</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image09.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image9.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Товары для дома</div>
+								</a>
+								<a href="" class="category__item item-category">
+									<div class="item-category__image">
+										<picture>
+											<source srcset="@img/category/image10.png" media="(min-width: 768.98px)">
+											<img src="@img/category/image110.png" alt="">
+										</picture>
+									</div>
+									<div class="item-category__title">Акции</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

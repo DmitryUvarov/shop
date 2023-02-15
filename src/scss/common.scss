@@ -9,3 +9,35 @@
     width: 0px;
   }
 }
+
+//========================================================================================================================================================
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include adaptiveValue("gap", 8, 4);
+  .swiper-pagination-bullet {
+    position: relative;
+    cursor: pointer;
+    @include adaptiveValue("width", 25, 10);
+    @include adaptiveValue("height", 25, 10);
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 140%;
+      height: 140%;
+      display: block;
+      top: -20%;
+      left: -20%;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+  }
+}

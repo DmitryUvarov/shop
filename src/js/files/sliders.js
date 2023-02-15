@@ -1,5 +1,5 @@
 /*
-Документация по работе в шаблоне: 
+Документация по работе в шаблоне:
 Документация слайдера: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
@@ -7,10 +7,10 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Подробнее смотри https://swiperjs.com/
 */
@@ -27,16 +27,16 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.discounts__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.discounts__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Autoplay, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 30,
 			autoHeight: true,
 			speed: 800,
 
@@ -46,22 +46,22 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+
 			// Эффекты
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 
 			// Пагинация
-			/*
+
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.discounts__slider .pagination',
 				clickable: true,
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -72,10 +72,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 
 			// Брейкпоинты
 			/*
@@ -101,7 +101,15 @@ function initSliders() {
 			*/
 			// События
 			on: {
+				init() {
+					this.el.addEventListener('mouseenter', () => {
+						this.autoplay.stop();
+					});
 
+					this.el.addEventListener('mouseleave', () => {
+						this.autoplay.start();
+					});
+				}
 			}
 		});
 	}
