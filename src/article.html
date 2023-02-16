@@ -164,6 +164,80 @@
                     </div>
                 </section>
 
+                <section class="page__product-info info-product">
+                    <div class="info-product__container">
+                        <div class="info-product__body_small">
+                            <div class="info-product__description description-product" data-showmore>
+                                <div class="description-product__title info-product__title">Описание</div>
+                                <div data-showmore-content="50" class="description-product__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                <button hidden data-showmore-button type="button" class="description-product__more"><span>Подробнее</span><span>Скыть</span></button>
+                            </div>
+                            <div class="info-product__about about-product">
+                                <div class="info-product__title">О товаре</div>
+                                <div class="about-product__items">
+                                    <div class="about-product__title">Цвет</div>
+                                    <div class="about-product__text">Черный</div>
+                                    <div class="about-product__title">Стиль</div>
+                                    <div class="about-product__text">Элегантный</div>
+                                    <div class="about-product__title">Паттерн</div>
+                                    <div class="about-product__text">Простой</div>
+                                    <div class="about-product__title">Детали</div>
+                                    <div class="about-product__text">Рукав из сетки</div>
+                                    <div class="about-product__title">Длина рукава</div>
+                                    <div class="about-product__text">Длинный</div>
+                                    <div class="about-product__title">Состав</div>
+                                    <div class="about-product__text">94% полиэстер, 6% эластан</div>
+                                    <div class="about-product__title">Инструкции по уходу:</div>
+                                    <div class="about-product__text">Машинная стирка или профессиональная химчистка</div>
+                                </div>
+                            </div>
+
+                            <div class="info-product__size">
+                                <img src="@img/article/image01.jpg" alt="">
+                            </div>
+
+                            <div class="info-product__images">
+                                <img src="@img/article/image02.jpg" alt="">
+                                <img src="@img/article/image03.jpg" alt="">
+                            </div>
+
+                            <div class="info-product__reviews reviews">
+                                <div class="reviews__title info-product__title">Отзывы</div>
+                                <div class="reviews__items">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top top-reviews">
+                                            <div class="top-reviews__image"><img src="@img/article/reviews.png" alt=""></div>
+                                            <div class="top-reviews__info">
+                                                <div class="top-reviews__name">Max Volkov</div>
+                                                <div class="top-reviews__date">26 июля</div>
+                                            </div>
+                                            <div class="top-reviews__rating _icon-review-star">4.5</div>
+                                        </div>
+                                        <div class="reviews__bottom">Покупал в подарок девушке, она очень довольна!</div>
+                                    </div>
+                                    <div class="reviews__item">
+                                        <div class="reviews__top top-reviews">
+                                            <div class="top-reviews__image"><img src="@img/article/reviews.png" alt=""></div>
+                                            <div class="top-reviews__info">
+                                                <div class="top-reviews__name">Мария Третьякова</div>
+                                                <div class="top-reviews__date">26 июля</div>
+                                            </div>
+                                            <div class="top-reviews__rating _icon-review-star">4.5</div>
+                                        </div>
+                                        <div class="reviews__bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                    </div>
+                                </div>
+                                <button class="reviews__button button">ОСТАВИТЬ ОТЗЫВ</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                @@include('html/_product-sections.htm',{
+					"title": "Похожие товары"
+				})
 
 			</main>
 			@@include('html/_footer.htm',{})
