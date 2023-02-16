@@ -207,7 +207,7 @@ export function formSubmit(options = { validate: true }) {
 				form: form
 			}
 		}));
-		// Показываем попап, если подключен модуль попапов 
+		// Показываем попап, если подключен модуль попапов
 		// и для формы указана настройка
 		setTimeout(() => {
 			if (flsModules.popup) {
@@ -228,13 +228,24 @@ export function formSubmit(options = { validate: true }) {
 export function formQuantity() {
 	document.addEventListener("click", function (e) {
 		let targetElement = e.target;
+
+		if (targetElement.closest('.buttons-main-product__card')) {
+			targetElement.closest('.buttons-main-product__main').classList.add('active')
+		}
+
 		if (targetElement.closest('.quantity__button')) {
 			let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
+			let buttonsMainProductMain = targetElement.closest('.buttons-main-product__main')
+			console.log(buttonsMainProductMain)
 			if (targetElement.classList.contains('quantity__button_plus')) {
 				value++;
+				buttonsMainProductMain.classList.add('active')
 			} else {
 				--value;
-				if (value < 1) value = 1;
+				if (value < 1){
+					buttonsMainProductMain.classList.remove('active')
+					value = 1;
+				}
 			}
 			targetElement.closest('.quantity').querySelector('input').value = value;
 		}
@@ -274,7 +285,7 @@ export function formRating() {
 			const ratingActiveWidth = index / 0.05;
 			ratingActive.style.width = `${ratingActiveWidth}%`;
 		}
-		// Возможность указать оценку 
+		// Возможность указать оценку
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item');
 			for (let index = 0; index < ratingItems.length; index++) {
