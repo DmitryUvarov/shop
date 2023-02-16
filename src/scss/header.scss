@@ -2,6 +2,13 @@
 
 .header {
   position: relative;
+
+  &_product {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
   &__top {
   }
 

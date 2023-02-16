@@ -5,7 +5,7 @@
   }
 }
 .product {
-  @include adaptiveValue("padding-top", 93, 30);
+  @include adaptiveValue("padding-top", 93, 0);
   @include adaptiveValue("padding-bottom", 75, 30);
   &__container {
   }

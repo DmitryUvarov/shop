@@ -518,7 +518,7 @@ export function showMore() {
 			}
 			let originalHeight = showMoreContent.offsetHeight;
 			parentHidden ? parentHidden.hidden = true : null;
-			// showMoreContent.style.height = `${hiddenHeight}px`;
+			showMoreContent.style.height = `${hiddenHeight}px`;
 			return originalHeight;
 		}
 		function showMoreActions(e) {
