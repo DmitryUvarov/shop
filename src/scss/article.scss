@@ -36,6 +36,15 @@
       flex-direction: column-reverse;
     }
   }
+  &__pagination {
+    position: absolute;
+    bottom: rem(13);
+    left: rem(20);
+
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
 
   &__trumb-slider {
     min-height: 0;
@@ -50,6 +59,7 @@
   &__trumb-slide {
   }
   &__slider {
+    position: relative;
     min-width: 0;
 
     @media (max-width: $mobile) {
@@ -179,6 +189,10 @@
     &:not(:last-child) {
       margin-bottom: rem(14);
     }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__price {
@@ -277,7 +291,7 @@
     margin-bottom: rem(31);
 
     @media (max-width: $mobile) {
-      margin-bottom: rem(15);
+      margin-bottom: rem(0);
     }
   }
   &__title {
@@ -339,6 +353,10 @@
 }
 .buttons-main-product {
   margin-top: auto;
+  @media (max-width: $mobile) {
+    order: -1;
+    margin-bottom: rem(20);
+  }
   &__main {
     display: flex;
     align-items: center;

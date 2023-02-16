@@ -46,6 +46,19 @@
   .swiper-pagination-bullet-active {
     background-color: #ffffff;
   }
+
+  &_fraction {
+    pointer-events: none;
+    min-width: rem(76);
+    width: max-content;
+    height: rem(39);
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: 125%; /* 20/16 */
+
+    color: #ffffff;
+    background: rgba(41, 41, 41, 0.37);
+  }
 }
 
 //========================================================================================================================================================

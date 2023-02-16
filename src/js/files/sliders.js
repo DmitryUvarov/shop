@@ -115,86 +115,134 @@ function initSliders() {
 	}
 	if (document.querySelector('.main-product__trumb-slider')) { // Указываем скласс нужного слайдера
 
-		for (const mobileSlider of document.querySelectorAll('.main-product__trumb-slider')) {
-			if (mobileSlider) {
-			  (function () {
-				"use strict";
 
-				const breakpoint = window.matchMedia("(min-width:768.98px)");
-				let trumbSliderProduct;
-				let mainSliderTrumb;
+		const trumbSliderProduct = new Swiper('.main-product__trumb-slider', { // Указываем скласс нужного слайдера
+			direction: 'vertical',
+			grabCursor: true,
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 12,
+			speed: 800,
+		});
 
-				const createMainSliderTrumb = (sliderTrumb) => {
-					const mainSliderTrumb = new Swiper('.main-product__slider', {
-						modules: [Thumbs],
-						observer: true,
-						observeParents: true,
 
-						speed: 800,
 
-						breakpoints: {
-							320: {
-								slidesPerView: 1,
-								spaceBetween: 10,
-							},
-							768: {
-								slidesPerView: 1,
-								spaceBetween: 15,
-							},
-						},
+		const mainSliderTrumb = new Swiper('.main-product__slider', {
+			modules: [Thumbs, Pagination],
+			observer: true,
+			observeParents: true,
 
-						thumbs: {
-							swiper: sliderTrumb,
-						},
-					});
-				}
+			speed: 800,
 
-				const enableSwiperMobile = function () {
-					trumbSliderProduct = new Swiper('.main-product__trumb-slider', { // Указываем скласс нужного слайдера
-						direction: 'horizontal',
-						grabCursor: true,
-						observer: true,
-						observeParents: true,
-						slidesPerView: "auto",
-						spaceBetween: 12,
-						speed: 800,
-					});
-					createMainSliderTrumb(trumbSliderProduct)
-				};
-				const enableSwiperPC = function () {
-					trumbSliderProduct = new Swiper('.main-product__trumb-slider', { // Указываем скласс нужного слайдера
-						direction: 'vertical',
-						grabCursor: true,
-						observer: true,
-						observeParents: true,
-						slidesPerView: 4,
-						spaceBetween: 12,
-						speed: 800,
-					});
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+			},
+			pagination: {
+				el: '.main-product__pagination',
+				clickable: true,
+				type: 'fraction',
+			},
 
-					createMainSliderTrumb(trumbSliderProduct)
-				};
 
-				const breakpointChecker = function () {
-					if (breakpoint.matches === true) {
-						if (trumbSliderProduct !== undefined) trumbSliderProduct.destroy(true, true);
-						if (mainSliderTrumb !== undefined) mainSliderTrumb.destroy(true, true);
-						enableSwiperPC()
-						return;
-					} else if (breakpoint.matches === false) {
-						if (trumbSliderProduct !== undefined) trumbSliderProduct.destroy(true, true);
-						if (mainSliderTrumb !== undefined) mainSliderTrumb.destroy(true, true);
-						return enableSwiperMobile();
-					}
-				};
+			thumbs: {
+				swiper: trumbSliderProduct,
+			},
+		});
 
-				breakpoint.addListener(breakpointChecker);
-				breakpointChecker();
+		// for (const mobileSlider of document.querySelectorAll('.main-product__trumb-slider')) {
+		// 	if (mobileSlider) {
+		// 	  (function () {
+		// 		"use strict";
 
-			  })();
-			}
+		// 		const breakpoint = window.matchMedia("(min-width:768.98px)");
+		// 		let trumbSliderProduct;
+		// 		let mainSliderTrumb;
 
-		  }
+		// 		const createMainSliderTrumb = (sliderTrumb) => {
+		// 			const mainSliderTrumb = new Swiper('.main-product__slider', {
+		// 				modules: [Thumbs, Pagination],
+		// 				observer: true,
+		// 				observeParents: true,
+
+		// 				speed: 800,
+
+		// 				breakpoints: {
+		// 					320: {
+		// 						slidesPerView: 1,
+		// 						spaceBetween: 10,
+		// 					},
+		// 					768: {
+		// 						slidesPerView: 1,
+		// 						spaceBetween: 15,
+		// 					},
+		// 				},
+		// 				pagination: {
+		// 					el: '.main-product__pagination',
+		// 					clickable: true,
+		// 					type: 'fraction',
+		// 				},
+
+
+		// 				thumbs: {
+		// 					swiper: sliderTrumb,
+		// 				},
+		// 			});
+		// 		}
+
+		// 		const enableSwiperMobile = function () {
+		// 			trumbSliderProduct = new Swiper('.main-product__trumb-slider', { // Указываем скласс нужного слайдера
+		// 				direction: 'horizontal',
+		// 				grabCursor: true,
+		// 				observer: true,
+		// 				observeParents: true,
+		// 				slidesPerView: "auto",
+		// 				spaceBetween: 12,
+		// 				speed: 800,
+		// 			});
+		// 			createMainSliderTrumb(trumbSliderProduct)
+		// 		};
+		// 		const enableSwiperPC = function () {
+		// 			trumbSliderProduct = new Swiper('.main-product__trumb-slider', { // Указываем скласс нужного слайдера
+		// 				direction: 'vertical',
+		// 				grabCursor: true,
+		// 				observer: true,
+		// 				observeParents: true,
+		// 				slidesPerView: 4,
+		// 				spaceBetween: 12,
+		// 				speed: 800,
+		// 			});
+
+		// 			createMainSliderTrumb(trumbSliderProduct)
+		// 		};
+
+		// 		const breakpointChecker = function () {
+		// 			if (breakpoint.matches === true) {
+		// 				if (trumbSliderProduct !== undefined) trumbSliderProduct.destroy(true, true);
+		// 				if (mainSliderTrumb !== undefined) mainSliderTrumb.destroy(true, true);
+		// 				enableSwiperPC()
+		// 				return;
+		// 			} else if (breakpoint.matches === false) {
+		// 				if (trumbSliderProduct !== undefined) trumbSliderProduct.destroy(true, true);
+		// 				if (mainSliderTrumb !== undefined) mainSliderTrumb.destroy(true, true);
+		// 				return enableSwiperMobile();
+		// 			}
+		// 		};
+
+		// 		breakpoint.addListener(breakpointChecker);
+		// 		breakpointChecker();
+
+		// 	  })();
+		// 	}
+
+		//   }
 	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
