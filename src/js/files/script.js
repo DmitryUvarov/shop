@@ -70,6 +70,10 @@ function documentActions(event) {
 
     }
 
+    if (targerElement.closest('.filter-btn-rows')) {
+        html.classList.toggle('catalog-rows')
+    }
+
 
 }
 
