@@ -135,6 +135,7 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "catalog";
+@import "article";
 
 .page {
   &__advantages {

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Карточка товара"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+
+
+                <section class="page__product-top product-top">
+                    <div class="product-top__container">
+                        <div class="top-page__breadcrumbs breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Одежда</a></li>
+                                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Наименование</a></li>
+                                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Наименование</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__product product">
+                    <div class="product__container">
+                        <div class="product__body">
+                            <div class="product__main main-product">
+                                <div class="main-product__sliders">
+
+                                    <div class="main-product__trumb-slider swiper">
+                                        <div class="main-product__trumb-wrapper swiper-wrapper">
+                                            <div class="main-product__trumb-slide trumb-slide swiper-slide">
+                                                <div class="trumb-slide__image"><img src="@img/article/trumb1.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__trumb-slide trumb-slide swiper-slide">
+                                                <div class="trumb-slide__image"><img src="@img/article/trumb2.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__trumb-slide trumb-slide swiper-slide">
+                                                <div class="trumb-slide__image"><img src="@img/article/trumb3.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__trumb-slide trumb-slide swiper-slide _icon-play">
+                                                <div class="trumb-slide__image"><img src="@img/article/trumb4.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__trumb-slide trumb-slide swiper-slide">
+                                                <div class="trumb-slide__image"><img src="@img/article/trumb1.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__trumb-slide trumb-slide swiper-slide _icon-play">
+                                                <div class="trumb-slide__image"><img src="@img/article/trumb2.jpg" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-product__slider swiper">
+                                        <div class="main-product__wrapper swiper-wrapper">
+                                            <div class="main-product__slide main-product-slide swiper-slide">
+                                                <div class="main-product-slide__image"><img src="@img/article/image1.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__slide main-product-slide swiper-slide">
+                                                <div class="main-product-slide__image"><img src="@img/article/image1.jpg" alt=""></div>
+                                            </div>
+                                            <div class="main-product__slide main-product-slide swiper-slide">
+                                                <div class="main-product-slide__image"><img src="@img/article/image1.jpg" alt=""></div>
+                                            </div>
+                                            <a href="https://www.youtube.com/watch?v=Jqf9haCd6mM"div class="main-product__slide main-product-slide swiper-slide _icon-play" data-fancybox>
+                                                <div class="main-product-slide__image"><img src="@img/article/image1.jpg" alt=""></div>
+                                            </a>
+                                            <div class="main-product__slide main-product-slide swiper-slide">
+                                                <div class="main-product-slide__image"><img src="@img/article/image1.jpg" alt=""></div>
+                                            </div>
+                                            <a href="https://www.youtube.com/watch?v=Jqf9haCd6mM" class="main-product__slide main-product-slide swiper-slide _icon-play" data-fancybox >
+                                                <div class="main-product-slide__image"><img src="@img/article/image1.jpg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-product__content content-main-product">
+                                    <div class="content-main-product__name">
+                                        <div class="content-main-product__title">Sleeve Sweatshot<small>ID: 235</small></div>
+                                        <a href="" class="content-main-product__share _icon-share"></a>
+                                    </div>
+                                    <div class="content-main-product__rating rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.6</div>
+                                    </div>
+                                    <div class="content-main-product__price price-main-product">
+                                        <div class="price-main-product__current">3.200.000 сум</div>
+                                        <div class="price-main-product__old">4.000.000 сум</div>
+                                    </div>
+                                    <div class="price-main-product__colors">
+                                        <div class="price-main-product__title-colors">Цвет: <span>Черный</span></div>
+                                        <div class="options options_color">
+                                            <div class="options__item">
+                                                <input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option">
+                                                <label for="o_1" class="options__label">
+                                                    <span style="background: #F1F1F1;"></span>
+                                                    <span style="border-color: #F1F1F1;"></span>
+                                                </label>
+                                            </div>
+                                            <div class="options__item">
+                                                <input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
+                                                <label for="o_2" class="options__label">
+                                                    <span style="background: #000000;"></span>
+                                                    <span style="border-color: #000000;"></span>
+                                                </label>
+                                            </div>
+                                            <div class="options__item">
+                                                <input hidden id="o_3" class="options__input" type="radio" value="2" name="option">
+                                                <label for="o_3" class="options__label">
+                                                    <span style="background: #FF0000;"></span>
+                                                    <span style="border-color: #FF0000;"></span>
+                                                </label>
+                                            </div>
+                                            <div class="options__item">
+                                                <input hidden id="o_4" class="options__input" type="radio" value="2" name="option">
+                                                <label for="o_4" class="options__label">
+                                                    <span style="background: #FF7A00;"></span>
+                                                    <span style="border-color: #FF7A00;"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-main-product__sizes sizes-main-product">
+                                        <div class="sizes-main-product__title">Размер</div>
+                                        <div class="sizes-main-product__items">
+                                            <div class="checkbox checkbox_size">
+                                                <input id="y_1" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+                                                <label for="y_1" class="checkbox__label"><span class="checkbox__text">S</span></label>
+                                            </div>
+                                            <div class="checkbox checkbox_size">
+                                                <input id="y_2" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+                                                <label for="y_2" class="checkbox__label"><span class="checkbox__text">M</span></label>
+                                            </div>
+                                            <div class="checkbox checkbox_size">
+                                                <input id="y_3" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+                                                <label for="y_3" class="checkbox__label"><span class="checkbox__text">L</span></label>
+                                            </div>
+                                            <div class="checkbox checkbox_size">
+                                                <input id="y_4" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+                                                <label for="y_4" class="checkbox__label"><span class="checkbox__text">XL</span></label>
+                                            </div>
+                                        </div>
+                                        <button class="sizes-main-product__btn">Размерная сетка</button>
+                                    </div>
+
+                                    <div class="price-main-product__buttons buttons-main-product">
+                                        <div class="buttons-main-product__main">
+                                            <button class="buttons-main-product__card button">В КОРЗИНУ</button>
+                                            <button class="buttons-main-product__favorite _icon-favorite"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
