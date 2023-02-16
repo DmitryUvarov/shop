@@ -1,10 +1,63 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+<div id="popup_size" aria-hidden="true" class="popup popup-size">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup-size__title">Размерная сетка</div>
+			<div class="popup-size__image"><img src="@img/popup/image01.jpg" alt=""></div>
 		</div>
 	</div>
-</div> -->
+</div>
+
+
+<div id="popup_review" aria-hidden="true" class="popup popup-review">
+	<div class="popup__wrapper">
+		<div class="popup__content popup-review__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="popup-review__title">Отзыв о товаре</div>
+
+			<form action="#" class="reviews-form">
+
+
+
+
+
+				<div class="reviews-form__line reviews-form__line_review">
+					Поставить оценку
+					<div class="rating rating_set reviews-form__rating" >
+						<div class="rating__body">
+							<div class="rating__active"></div>
+							<div class="rating__items">
+								<input type="radio" class="rating__item" value="1" name="rating">
+								<input type="radio" class="rating__item" value="2" name="rating">
+								<input type="radio" class="rating__item" value="3" name="rating">
+								<input type="radio" class="rating__item" value="4" name="rating">
+								<input type="radio" class="rating__item" value="5" name="rating">
+							</div>
+						</div>
+						<div class="rating__value">0</div>
+					</div>
+				</div>
+
+				<div class="reviews-form__line">
+					<label for="" class="reviews-form__label">
+						<input autocomplete="off" type="text" name="form[]" data-error="Введите имя" data-required placeholder="Имя*" class="input">
+					</label>
+					<label for="" class="reviews-form__label">
+						<input autocomplete="off" type="text" name="form[]" data-error="Введите номер телефона" data-required placeholder="Номер телефона*" class="input">
+					</label>
+				</div>
+				<div class="reviews-form__line">
+					<textarea autocomplete="off" name="form[]" placeholder="Ваш отзыв*" data-error="Заполните поле" data-required class="input"></textarea>
+				</div>
+
+				<div class="reviews-form__buttons">
+					<button data-close type="button" class="reviews-form__button button button_secondary">ОТМЕНИТЬ</button>
+					<button class="reviews-form__button button">ОТПРАВИТЬ</button>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>

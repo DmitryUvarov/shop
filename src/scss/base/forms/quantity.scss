@@ -11,6 +11,7 @@
 
   // .quantity__button
   &__button {
+    touch-action: manipulation;
     flex: 0 0 rem(40);
     position: relative;
     cursor: pointer;

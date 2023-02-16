@@ -428,6 +428,19 @@
 
 .info-product {
   @include adaptiveValue("padding-bottom", 78, 30);
+
+  &__reviews-form {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+
+    .reviews-form__title {
+      display: block;
+    }
+    .reviews-form__line_review {
+      @include adaptiveValue("margin-top", 44, 8);
+    }
+  }
   &__container {
   }
 
@@ -572,6 +585,7 @@
     @media (max-width: $mobile) {
       height: rem(40);
       font-size: rem(14);
+      display: none;
     }
   }
 }

@@ -29,4 +29,63 @@
   &_blue {
     background-color: #4361ee;
   }
+  &_secondary {
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #000000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.input {
+  background-color: #eff0f7;
+  border: 1px solid #eff0f7;
+  height: rem(56);
+  width: 100%;
+  padding: rem(8) rem(26);
+
+  font-weight: 400;
+  font-size: rem(16);
+  line-height: 175%; /* 28/16 */
+  letter-spacing: 0.75px;
+  color: #000000;
+
+  ._form-error & {
+    border: 1px solid #ff0000;
+
+    &::placeholder {
+      color: #ff0000;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    font-size: rem(15);
+    padding: rem(8) rem(10);
+    height: rem(50);
+  }
+
+  &::placeholder {
+    color: #a0a3bd;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #000;
+  }
+}
+
+textarea {
+  min-height: rem(152);
+  resize: vertical;
+
+  @media (max-width: $mobile) {
+    min-height: rem(100);
+  }
 }
