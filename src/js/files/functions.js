@@ -78,7 +78,7 @@ export let _slideUp = (target, duration = 500, showmore = 0) => {
 			target.style.removeProperty('transition-duration');
 			target.style.removeProperty('transition-property');
 			target.classList.remove('_slide');
-			// Создаем событие 
+			// Создаем событие
 			document.dispatchEvent(new CustomEvent("slideUpDone", {
 				detail: {
 					target: target
@@ -113,7 +113,7 @@ export let _slideDown = (target, duration = 500, showmore = 0) => {
 			target.style.removeProperty('transition-duration');
 			target.style.removeProperty('transition-property');
 			target.classList.remove('_slide');
-			// Создаем событие 
+			// Создаем событие
 			document.dispatchEvent(new CustomEvent("slideDownDone", {
 				detail: {
 					target: target
@@ -518,7 +518,7 @@ export function showMore() {
 			}
 			let originalHeight = showMoreContent.offsetHeight;
 			parentHidden ? parentHidden.hidden = true : null;
-			showMoreContent.style.height = `${hiddenHeight}px`;
+			// showMoreContent.style.height = `${hiddenHeight}px`;
 			return originalHeight;
 		}
 		function showMoreActions(e) {
@@ -579,7 +579,7 @@ export function indexInParent(parent, element) {
 	const array = Array.prototype.slice.call(parent.children);
 	return Array.prototype.indexOf.call(array, element);
 };
-// Обработа медиа запросов из атрибутов 
+// Обработа медиа запросов из атрибутов
 export function dataMediaQueries(array, dataSetValue) {
 	// Получение объектов с медиа запросами
 	const media = Array.from(array).filter(function (item, index, self) {
