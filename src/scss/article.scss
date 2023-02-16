@@ -372,7 +372,9 @@
 
   &__body {
     &_small {
-      max-width: rem(745);
+      @media (min-width: $mobile) {
+        max-width: rem(745);
+      }
     }
   }
 
