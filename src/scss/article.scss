@@ -40,6 +40,10 @@
   &__trumb-slider {
     min-height: 0;
     max-height: 595px;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
   &__trumb-wrapper {
   }
@@ -47,6 +51,10 @@
   }
   &__slider {
     min-width: 0;
+
+    @media (max-width: $mobile) {
+      margin: 0 -15px;
+    }
   }
   &__slide {
   }
@@ -131,7 +139,7 @@
 
   &__title {
     font-weight: 500;
-    @include adaptiveValue("font-size", 20, 16);
+    font-size: rem(20);
     line-height: 120%; /* 24/20 */
     color: #363636;
 
@@ -140,6 +148,10 @@
       line-height: 250%; /* 40/16 */
       color: #858585;
       margin-left: em(10, 16);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
   }
 
@@ -151,6 +163,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
     &::before {
       font-size: rem(22);
       @include adaptiveValue("font-size", 22, 18);
@@ -169,6 +186,10 @@
 }
 
 .price-main-product {
+  @media (max-width: $mobile) {
+    order: -1;
+  }
+
   &:not(:last-child) {
     margin-bottom: rem(31);
 
@@ -183,14 +204,14 @@
   &__current {
     font-weight: 700;
     font-size: rem(40);
-    @include adaptiveValue("font-size", 40, 24);
+    @include adaptiveValue("font-size", 40, 20);
     line-height: 122.5%; /* 49/40 */
     color: #000000;
     &:not(:last-child) {
       margin-bottom: rem(31);
 
       @media (max-width: $mobile) {
-        margin-bottom: rem(15);
+        margin-bottom: rem(7);
       }
     }
   }
@@ -199,7 +220,7 @@
     position: relative;
     width: max-content;
     font-weight: 600;
-    @include adaptiveValue("font-size", 16, 13);
+    @include adaptiveValue("font-size", 16, 14);
     line-height: 125%; /* 20/16 */
     color: #858585;
 
@@ -228,7 +249,7 @@
 
   &__title-colors {
     font-weight: 600;
-    @include adaptiveValue("font-size", 16, 13);
+    font-size: rem(16);
     line-height: 125%; /* 20/16 */
     color: #000000;
 
@@ -261,7 +282,7 @@
   }
   &__title {
     font-weight: 600;
-    @include adaptiveValue("font-size", 16, 13);
+    font-size: rem(16);
     line-height: 125%; /* 20/16 */
     color: #1a1e29;
 
@@ -293,7 +314,7 @@
 
   &__btn {
     font-weight: 600;
-    @include adaptiveValue("font-size", 16, 13);
+    font-size: rem(16);
     line-height: 125%; /* 20/16 */
     text-decoration-line: underline;
     color: #017eb4;
@@ -380,7 +401,7 @@
 
   &__title {
     font-weight: 600;
-    @include adaptiveValue("font-size", 19, 16);
+    font-size: rem(19);
     line-height: 131.6%; /* 25/19 */
     color: #000000;
     margin-top: rem(15);
@@ -415,24 +436,32 @@
   display: flex;
   flex-direction: column;
   &__title {
+    @media (max-width: $mobile) {
+      margin-bottom: 8px;
+    }
   }
 
   &__content {
     font-weight: 400;
-    @include adaptiveValue("font-size", 19, 14);
+    font-size: rem(19);
     line-height: 131.6%; /* 25/19 */
     color: #858585;
   }
 
   &__more {
     font-weight: 400;
-    @include adaptiveValue("font-size", 19, 14);
+    font-size: rem(19);
     line-height: 131.6%; /* 25/19 */
     text-decoration-line: underline;
     color: #000000;
 
     margin-top: rem(6);
     margin-left: auto;
+
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      margin-right: auto;
+    }
   }
 }
 
@@ -441,11 +470,11 @@
   &__items {
     display: grid;
     grid-template-columns: max-content auto;
-    @include adaptiveValue("column-gap", 60, 15);
+    @include adaptiveValue("column-gap", 60, 10);
     @include adaptiveValue("row-gap", 16, 10);
 
     font-weight: 400;
-    font-size: 14px;
+    @include adaptiveValue("font-size", 14, 12);
     line-height: 17px;
   }
   &__title {
@@ -464,7 +493,7 @@
     color: #000000;
     margin-top: rem(0);
 
-    @include adaptiveValue("margin-bottom", 40, 20);
+    @include adaptiveValue("margin-bottom", 40, 30);
   }
 
   &__items {

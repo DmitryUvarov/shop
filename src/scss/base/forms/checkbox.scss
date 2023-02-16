@@ -75,8 +75,8 @@
       transition: all 0.3s ease 0s;
 
       @media (max-width: $mobile) {
-        width: 60px;
-        height: 35px;
+        width: 80px;
+        height: 40px;
       }
       &::before {
         display: none;
@@ -100,7 +100,7 @@
       transition: all 0.3s ease 0s;
 
       @media (max-width: $mobile) {
-        font-size: rem(18);
+        font-size: rem(16);
       }
     }
   }

@@ -129,22 +129,20 @@ function initSliders() {
 						modules: [Thumbs],
 						observer: true,
 						observeParents: true,
-						slidesPerView: 1,
-						spaceBetween: 15,
+
 						speed: 800,
-						/*
+
 						breakpoints: {
 							320: {
 								slidesPerView: 1,
-								spaceBetween: 0,
-								autoHeight: true,
+								spaceBetween: 10,
 							},
 							768: {
-								slidesPerView: 2,
-								spaceBetween: 20,
+								slidesPerView: 1,
+								spaceBetween: 15,
 							},
 						},
-						*/
+
 						thumbs: {
 							swiper: sliderTrumb,
 						},
