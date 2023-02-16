@@ -156,6 +156,14 @@
 
   &__item {
   }
+
+  &__button {
+    width: 100%;
+    margin-top: rem(50);
+    @media (min-width: em(800.98)) {
+      display: none;
+    }
+  }
 }
 .item-filter {
   &:not(:last-child) {
