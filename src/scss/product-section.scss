@@ -55,6 +55,19 @@
     position: relative;
     padding-bottom: percent(270, 320);
 
+    @media (any-hover: hover) {
+      &:hover {
+        & img:first-child {
+          visibility: hidden;
+          opacity: 0;
+        }
+        & img:nth-child(2) {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
     & img {
       position: absolute;
       width: 100%;
@@ -62,6 +75,12 @@
       top: 0;
       left: 0;
       object-fit: cover;
+      transition: all 0.3s ease 0s;
+
+      &:nth-child(2) {
+        visibility: hidden;
+        opacity: 0;
+      }
     }
   }
   &__favotite {
