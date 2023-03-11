@@ -178,9 +178,16 @@
   }
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: rem(12);
 
+    @media (max-width: $pc) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: em(1080)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @media (max-width: $mobile) {
       grid-template-columns: repeat(2, 1fr);
       gap: rem(6);
