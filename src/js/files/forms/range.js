@@ -14,12 +14,18 @@ export function rangeInit() {
 			let textValuesInputs = priceSlider.closest('.range').querySelectorAll('input[gata-value]')
 			let textValuesSpans = priceSlider.closest('.range').querySelectorAll('span[gata-value]')
 
+			const minValue = priceSlider.closest('.range').querySelector('[data-min]').dataset.min
+			const maxValue = priceSlider.closest('.range').querySelector('[data-max]').dataset.max
+			const startValue = priceSlider.closest('.range').querySelector('[data-start]').dataset.start
+			const endValue = priceSlider.closest('.range').querySelector('[data-end]').dataset.end
+
+
 			noUiSlider.create(priceSlider, {
-				start: [0, 200000],
+				start: [Number(startValue), Number(endValue)],
 				connect: true,
 				range: {
-					'min': [0],
-					'max': [200000]
+					'min': [Number(minValue)],
+					'max': [Number(maxValue)]
 				},
 
 			});
