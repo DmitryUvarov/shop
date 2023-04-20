@@ -86,15 +86,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 2;
     }
   }
   &__image {
+    & img {
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 .swiper-slide {
 }
 .main-product-slide {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &._icon-play {
     &::before {
       position: absolute;
@@ -122,13 +135,14 @@
     }
 
     & img {
+      max-width: 100%;
       @media (max-width: $mobile) {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
   }

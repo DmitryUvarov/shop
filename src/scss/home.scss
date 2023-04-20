@@ -277,9 +277,16 @@
 
   @media (min-width: $mobile) {
     background: #eff0f6;
+    min-height: rem(140);
   }
   &__image {
     flex-shrink: 0;
+
+    @media (min-width: $mobile) {
+      flex: 0 0 85px;
+      position: relative;
+      height: 100%;
+    }
 
     @media (max-width: $mobile) {
       position: relative;
@@ -287,13 +294,23 @@
       height: 70px;
       background: #eff0f6;
       border-radius: 50%;
-
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     & img {
+      max-width: 100%;
+
+      @media (min-width: $mobile) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
