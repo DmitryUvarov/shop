@@ -236,14 +236,20 @@ export function formQuantity() {
 		if (targetElement.closest('.quantity__button')) {
 			let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
 			let buttonsMainProductMain = targetElement.closest('.buttons-main-product__main')
-			console.log(buttonsMainProductMain)
+
 			if (targetElement.classList.contains('quantity__button_plus')) {
 				value++;
-				buttonsMainProductMain.classList.add('active')
+				if (buttonsMainProductMain) {
+					buttonsMainProductMain.classList.add('active')
+				}
+
 			} else {
 				--value;
 				if (value < 1){
-					buttonsMainProductMain.classList.remove('active')
+					if (buttonsMainProductMain) {
+						buttonsMainProductMain.classList.remove('active')
+					}
+
 					value = 1;
 				}
 			}

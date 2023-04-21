@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="page__top top-page">
+                <div class="top-page__container">
+                    <div class="top-page__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Корзина</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cart">
+                <div class="cart__container">
+
+                    <h2 class="cart__title">Корзина</h2>
+
+                    <div class="cart__control">
+                        <button class="cart__control-item cart__all _icon-check">Выбрать все </button>
+                        <button class="cart__control-item cart__delete _icon-close">Удалить</button>
+                    </div>
+
+                    <div class="cart__body">
+
+                        <div class="cart__items">
+                            <div class="cart__item item-cart">
+                                <a href="#" class="item-cart__image">
+                                    <img src="@img/user/02.jpg" alt="">
+                                </a>
+                                <div class="item-cart__content">
+                                    <a href="#" class="item-cart__title">Игровая мышь проводная Trust</a>
+                                    <button class="item-cart__favorite _icon-favorite">В избранное</button>
+                                </div>
+                                <div class="item-cart__asset">
+                                    <div class="item-cart__price">
+                                        <div class="item-cart__price-current">346.763 сум</div>
+                                        <div class="item-cart__price-old">824.110 сум</div>
+                                    </div>
+
+                                    <div class="item-cart__quantity quantity">
+                                        <button type="button" class="quantity__button quantity__button_plus"></button>
+                                        <div class="quantity__input">
+                                            <input autocomplete="off" type="text" name="form[]" value="1">
+                                        </div>
+                                        <button type="button" class="quantity__button quantity__button_minus"></button>
+                                    </div>
+
+                                </div>
+
+                                <div class="item-cart__checkbox">
+                                    <input id="c_1" data-error="Ошибка" class="item-cart__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_1" class="item-cart__label _icon-check"></label>
+                                </div>
+
+                            </div>
+                            <div class="cart__item item-cart">
+                                <a href="#" class="item-cart__image">
+                                    <img src="@img/user/02.jpg" alt="">
+                                </a>
+                                <div class="item-cart__content">
+                                    <a href="#" class="item-cart__title">Игровая мышь проводная Trust</a>
+                                    <button class="item-cart__favorite _icon-favorite active">В избранное</button>
+                                </div>
+                                <div class="item-cart__asset">
+                                    <div class="item-cart__price">
+                                        <div class="item-cart__price-current">346.763 сум</div>
+                                        <div class="item-cart__price-old">824.110 сум</div>
+                                    </div>
+
+                                    <div class="item-cart__quantity quantity">
+                                        <button type="button" class="quantity__button quantity__button_plus"></button>
+                                        <div class="quantity__input">
+                                            <input autocomplete="off" type="text" name="form[]" value="1">
+                                        </div>
+                                        <button type="button" class="quantity__button quantity__button_minus"></button>
+                                    </div>
+
+                                </div>
+
+                                <div class="item-cart__checkbox">
+                                    <input id="c_2" data-error="Ошибка" class="item-cart__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_2" class="item-cart__label _icon-check"></label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="cart__ordering ordering">
+                            <a href="#" class="ordering__button button">ПЕРЕЙТИ К ОФОРМЛЕНИЮ</a>
+                            <div class="ordering__items">
+                                <div class="ordering__line">
+                                    <div class="ordering__title">Всего: 2 товара</div>
+                                    <div class="ordering__price">1.648.220 сум</div>
+                                </div>
+                                <div class="ordering__line">
+                                    <div class="ordering__title">Выгода</div>
+                                    <div class="ordering__price ordering__price_sale">-954.694 сум</div>
+                                </div>
+                            </div>
+
+                            <div class="ordering__total">
+                                <span>Итого</span>
+                                <span>693.526 сум</span>
+                            </div>
+
+                            <div class="ordering__promo">
+                                <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Промокод" class="input">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

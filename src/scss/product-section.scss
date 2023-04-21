@@ -115,6 +115,13 @@
         font-size: rem(20);
       }
     }
+
+    &.active {
+      &::before {
+        content: "\e914";
+        color: #ff0000;
+      }
+    }
   }
   &__sale {
     font-weight: 600;
@@ -241,6 +248,37 @@
         opacity: 0.9;
       }
     }
+  }
+
+  &_over {
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 56px);
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 5;
+
+      @media (max-width: $mobile) {
+        height: calc(100% - 28px);
+      }
+    }
+  }
+  &__over {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: 120%; /* 24/20 */
+    color: #ffffff;
+    position: absolute;
+    top: rem(135);
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    text-align: center;
   }
 }
 .price-product {

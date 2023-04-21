@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="page__top top-page">
+                <div class="top-page__container">
+                    <div class="top-page__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Профиль</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="user">
+                <div class="user__container">
+                    <div class="user__body">
+
+                        <aside class="user__aside user-aside">
+                            <a href="#" class="user-aside__link">Мои заказы</a>
+                            <a href="#" class="user-aside__link active">Настройки</a>
+                            <a href="#" class="user-aside__link user-aside__link_out">Выйти</a>
+                        </aside>
+
+                        <form action="#" class="user__settings settings-user">
+                            <div class="settings-user__title">Мои данные</div>
+                            <div class="settings-user__image">
+                                <img src="@img/user/01.jpg" alt="">
+                                <label for="inp12" class="_icon-edit settings-user__edit">
+                                    <input id="inp12" autocomplete="off" type="file" name="form[]" class="input">
+                                </label>
+                            </div>
+
+                            <div class="settings-user__items">
+                                <label for="inp13" class="settings-user__item">
+                                    <span class="settings-user__item-title">Имя</span>
+                                    <input id="inp13" autocomplete="off" type="text" name="form[]" class="settings-user__input input">
+                                </label>
+                                <label for="inp14" class="settings-user__item">
+                                    <span class="settings-user__item-title">Фамилия</span>
+                                    <input id="inp14" autocomplete="off" type="text" name="form[]" class="settings-user__input input">
+                                </label>
+                                <label for="inp15" class="settings-user__item">
+                                    <span class="settings-user__item-title">Отчество</span>
+                                    <input id="inp15" autocomplete="off" type="text" name="form[]" class="settings-user__input input">
+                                </label>
+                                <label for="inp16" class="settings-user__item">
+                                    <span class="settings-user__item-title">Электронная почта</span>
+                                    <input id="inp16" autocomplete="off" type="text" name="form[]" class="settings-user__input input">
+                                </label>
+                                <label for="inp17" class="settings-user__item">
+                                    <span class="settings-user__item-title">Номер телефона</span>
+                                    <input id="inp17" autocomplete="off" type="text" name="form[]" class="settings-user__input input">
+                                </label>
+                                <label for="inp18" class="settings-user__item">
+                                    <span class="settings-user__item-title">Дата рождения</span>
+                                    <input id="inp18" autocomplete="off" type="text" name="form[]" class="settings-user__input input">
+                                </label>
+                            </div>
+
+                            <button class="settings-user__save button">СОХРАНИТЬ</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

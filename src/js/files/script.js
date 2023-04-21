@@ -74,6 +74,13 @@ function documentActions(event) {
         html.classList.toggle('catalog-rows')
     }
 
+    if (targerElement.closest('.cart__control-item.cart__all')) {
+        document.querySelectorAll('input.item-cart__input').forEach(item => {
+            item.checked = true
+        });
+
+    }
+
 
 }
 

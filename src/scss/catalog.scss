@@ -1,6 +1,8 @@
 .top-page {
-  @include adaptiveValue("padding-top", 45, 30);
-  padding-bottom: rem(15);
+  @media (min-width: em(800.98)) {
+    @include adaptiveValue("padding-top", 45, 30);
+    padding-bottom: rem(15);
+  }
   &__container {
   }
 

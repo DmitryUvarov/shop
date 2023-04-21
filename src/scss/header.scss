@@ -275,6 +275,12 @@
       font-size: rem(22);
       color: #000;
     }
+
+    &.active {
+      &::before {
+        content: "\e914";
+      }
+    }
   }
 }
 .footer-header {
