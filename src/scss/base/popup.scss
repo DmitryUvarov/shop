@@ -321,6 +321,10 @@ body::after {
   &__line {
     display: block;
     margin-bottom: rem(10);
+
+    input {
+      border-radius: 0 !important;
+    }
   }
 
   &__buttons {
