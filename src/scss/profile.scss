@@ -250,6 +250,10 @@
 
   &__image {
     max-width: rem(150);
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__content {
